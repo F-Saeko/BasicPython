@@ -4,6 +4,12 @@ text = """
 """
 
 # TODO
-list(map(len, ["How", "I", "want", "a", "drink", "alcoholic", "of", "course", "after", "the", "heavy", "chapters", "involving",
-    "quantum", "mechanics", "All", "of", "thy", "geometry", "Herr", "Planck", "is", "fairly", "hard"]))
+
+words = text.replace(",","").replace(".","").split()
+文字数 = list(map(len,words))
+
+print(type(words))
+print(words)
+print(type(文字数))
+print(文字数)
 
