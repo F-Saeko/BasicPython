@@ -7,9 +7,5 @@ text = """
 words = text.replace(",","").replace(".","").split()
 文字数 = list(map(len,words))
 
-print(type(words))
-print(words)
-print(type(文字数))
-print(文字数)
 print(''.join(map(str,文字数)))
 
