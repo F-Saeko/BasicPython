@@ -4,4 +4,7 @@ text = """
 """
 
 # TODO
+words = text.replace(",","").replace(".","").split()
+文字数 = list(map(len,words))
 
+print(''.join(map(str,文字数)))
