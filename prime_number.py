@@ -1,9 +1,5 @@
-a = input("aの値を入力: ")
-b = input("bの値を入力: ")
-
-# TODO
-a = int(a)
-b = int(b)
+a = 61
+b = 10
 
 if a <= 1:
     print(str(a) + "は素数ではありません")
@@ -24,4 +20,3 @@ else:
             break
     else:
         print(str(b) + "は素数です")
-        
