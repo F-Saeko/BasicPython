@@ -1,11 +1,25 @@
 import math
 from math import sin
 
-h = (math.pi/2)/100
-integral = 0.5 * (sin(0)+sin(math.pi/2))
+def trapezoidal_integral(f, a, b ,n):
 
-for i in range(1 ,100):
-    integral += sin(i*h)
-integral *= h
+    h = (b - a) / n
+    integral = 0.5 * (f(a) + f(b))
 
-print(integral)
+    for i in range(1 ,n):
+        integral += f(a + i * h)
+    integral *= h
+
+    return  integral
+
+# (1)
+result1 = trapezoidal_integral(lambda x: sin(x), 0, math.pi/2, 50)
+print(result1)
+
+# (2)
+result2 = trapezoidal_integral(lambda x: 4/(1+x**2), 0, 1, 100)
+print(result2)
+
+# (3)
+result3 = trapezoidal_integral(lambda x: math.sqrt(math.pi) * math.exp(-x ** 2), -100, 100, 1000)
+print(result3)

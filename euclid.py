@@ -1,34 +1,36 @@
-#(1)
-a1 = 10
-b1 = 20
+def euclid(a, b):
+    while b != 0:
+        c = a % b
+        a = b
+        b = c
+    return a
 
-while b1 != 0:
-    c1 = a1 % b1
-    a1 = b1
-    b1 = c1
+#(3-1)
+result1 = euclid(10, 20)
+print(result1)
 
-print(a1)
+#(3-2)
+result2 = euclid(14, 91)
+print(result2)
 
-
-#(2)
-a2 = 14
-b2 = 91
-
-while b2 != 0:
-    c2 = a2 % b2
-    a2 = b2
-    b2 = c2
-
-print(a2)
+#(3-3)
+result3 = euclid(91, 14)
+print(result3)
 
 
-#(3)
-a3 = 91
-b3 = 14
+#問4
+def Coprime(a,b):
+   result = euclid(a,b)
+   if result == 1:
+       print("互いに素")
+   else:
+       print("互いに素ではない")
 
-while b3 != 0:
-    c3 = a3 % b3
-    a3 = b3
-    b3 = c3
+#(4-1)
+Coprime(10,20)
 
-print(a3)
+#(4-2)
+Coprime(14,91)
+
+#(4-3)
+Coprime(91,14)
