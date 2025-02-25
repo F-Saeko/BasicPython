@@ -1,34 +1,18 @@
+def euclid(a, b):
+    while b != 0:
+        c = a % b
+        a = b
+        b = c
+    return a
+
 #(1)
-a1 = 10
-b1 = 20
-
-while b1 != 0:
-    c1 = a1 % b1
-    a1 = b1
-    b1 = c1
-
-print(a1)
-
+result1 = euclid(10, 20)
+print(result1)
 
 #(2)
-a2 = 14
-b2 = 91
-
-while b2 != 0:
-    c2 = a2 % b2
-    a2 = b2
-    b2 = c2
-
-print(a2)
-
+result2 = euclid(14, 91)
+print(result2)
 
 #(3)
-a3 = 91
-b3 = 14
-
-while b3 != 0:
-    c3 = a3 % b3
-    a3 = b3
-    b3 = c3
-
-print(a3)
+result3 = euclid(91, 14)
+print(result3)
